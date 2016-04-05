@@ -1,0 +1,7 @@
+---
+- hosts: local
+  tasks:
+   - name: Install docker
+     apt: pkg=docker.io state=installed update_cache=true
+     apt: pkg=cifs-util state=installed update_cache=true
+     apt: pkg=flashplugin-installer state=installed update_cache=true
