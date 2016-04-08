@@ -8,3 +8,8 @@
        - cifs-utils
        - flashplugin-installer
        - fish
+   - group: name=docker state=present
+   - service: name=docker state=restarted
+   - user: name={{item}} groups=docker append=yes
+     with_items:
+       - m999jve

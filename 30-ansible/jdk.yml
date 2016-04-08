@@ -1,0 +1,7 @@
+---
+- hosts: local
+  tasks:
+   - name: Install jdk
+     apt: name={{item}} state=installed update_cache=true
+     with_items:
+       - openjdk-8-jdk
