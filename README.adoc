@@ -1,2 +1,6 @@
-# lnx-jumpstart
+= lnx-jumpstart
+:toc:
+:toclevels: 4
+:numbered:
+
 tired of repeating the same steps on my new linux boxes => automate them
