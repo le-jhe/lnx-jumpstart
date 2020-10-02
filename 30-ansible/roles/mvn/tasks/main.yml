@@ -1,0 +1,33 @@
+---
+
+- name: "Create an extraction directory"
+  file:
+    path: "{{dev_dir}}"
+    state: directory
+    mode: 0755
+    owner: "{{ devel_owner }}"
+    group: "{{ devel_group }}"
+
+- name: "Extract {{mvn_src}} tgz archive"
+  unarchive:
+    src: "{{mvn_src}}"
+    dest: "{{dev_dir}}"
+    remote_src: yes
+    owner: "{{ devel_owner }}"
+    group: "{{ devel_group }}"
+
+- name: link mvn
+  file:
+    src: "{{dev_dir}}/apache-maven-{{version}}"
+    dest: "{{dev_dir}}/mvn"
+    state: link
+    owner: "{{ devel_owner }}"
+    group: "{{ devel_group }}"
+
+- name: "/etc/profile.d contrib for mvn"
+  template:
+    src: "./templates/etc/profile.d/mvn.sh"
+    dest: "/etc/profile.d/mvn.sh"
+    mode: 0755
+    owner: "{{ devel_owner }}"
+    group: "{{ devel_group }}"

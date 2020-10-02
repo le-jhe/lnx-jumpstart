@@ -1,0 +1,5 @@
+---
+
+app: mvn
+version: 3.6.3
+mvn_src: "https://apache.belnet.be/maven/maven-3/{{version}}/binaries/apache-maven-{{version}}-bin.tar.gz"

@@ -1,0 +1,8 @@
+[common]
+localhost
+
+[java]
+localhost
+
+[mvn]
+localhost
