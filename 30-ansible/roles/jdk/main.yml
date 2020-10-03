@@ -1,0 +1,12 @@
+---
+
+  tasks:
+   - name: Install jdk
+     apt:
+       name={{item}}
+       state=latest
+       update_cache=true
+     with_items:
+#       - openjdk-8-jdk
+       - openjdk-jdk
+       - openjdk-jdk-devel

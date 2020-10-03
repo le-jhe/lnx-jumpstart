@@ -2,6 +2,11 @@
 
 tasks:
  - name: Install common packages
-   apt: name={{item}} state=installed update_cache=true
+   apt:
+     name={{item}}
+     state=latest
+     update_cache=true
    with_items:
        - tree
+       - htop
+       - dstat

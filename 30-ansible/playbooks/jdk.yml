@@ -1,0 +1,9 @@
+---
+
+- hosts: jdk
+# vars_files:
+#    - "{{ vars_files_path }}"
+  roles:
+    - jdk
+    - common
+

@@ -1,7 +1,10 @@
 [common]
 localhost
 
-[java]
+[pkgs]
+localhost
+
+[jdk]
 localhost
 
 [mvn]
