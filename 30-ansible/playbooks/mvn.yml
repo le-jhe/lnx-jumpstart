@@ -1,8 +1,6 @@
 ---
 
 - hosts: mvn
-# vars_files:
-#    - "{{ vars_files_path }}"
   roles:
     - mvn
     - common

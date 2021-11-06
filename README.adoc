@@ -3,4 +3,12 @@
 :toclevels: 4
 :numbered:
 
+== pitch
 tired of repeating the same steps on my new linux boxes => automate them
+
+== work in progress
+* fix python vs python3 command line
+** install `python-is-python3`
+* change user used for install (non root)
+** ./30-ansible/roles/common/defaults/main.yml
+
