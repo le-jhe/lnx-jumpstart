@@ -1,0 +1,28 @@
+---
+
+- name: "Create an extraction directory"
+  file:
+    path: "{{ dev_dir }}/yatta"
+    state: directory
+    mode: 0755
+    owner: "{{ devel_owner }}"
+    group: "{{ devel_group }}"
+
+- name: "copy {{ yatta_src }} archivei to {{ yatta_file }}"
+  get_url:
+    url: "{{yatta_src}}"
+    dest: "{{ dev_dir }}/yatta/{{ yatta_file }}"
+    checksum: sha256:b26a4801c5e609a92f2cd706cfd6eeb7e5db9f6fe2afde32c040c105093bf9f4
+    #don't download if it already exists locally
+    force: no
+    owner: "{{ devel_owner }}"
+    group: "{{ devel_group }}"
+
+
+- name: "/etc/profile.d contrib for yatta"
+  template:
+    src: "./templates/etc/profile.d/yatta.sh"
+    dest: "/etc/profile.d/yatta.sh"
+    mode: 0755
+    owner: "{{ devel_owner }}"
+    group: "{{ devel_group }}"

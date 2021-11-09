@@ -1,0 +1,7 @@
+---
+
+- hosts: yatta
+  roles:
+    - yatta
+    - common
+
