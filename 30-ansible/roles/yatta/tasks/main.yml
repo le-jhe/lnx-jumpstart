@@ -8,7 +8,7 @@
     owner: "{{ devel_owner }}"
     group: "{{ devel_group }}"
 
-- name: "copy {{ yatta_src }} archivei to {{ yatta_file }}"
+- name: "copy {{ yatta_src }} archive to {{ yatta_file }}"
   get_url:
     url: "{{yatta_src}}"
     dest: "{{ dev_dir }}/yatta/{{ yatta_file }}"
