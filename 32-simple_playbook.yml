@@ -1,0 +1,9 @@
+---
+
+- name: first
+  gather_facts: False
+  hosts: all
+  tasks:
+    - name: debug something
+      debug:
+        msg: "Hello, jhe world !"

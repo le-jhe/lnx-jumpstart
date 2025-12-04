@@ -1,0 +1,8 @@
+---
+
+#jdk_version: "11.0.8+10"
+jdk_version: "11.0.29+7"
+jdk_escaped_version: "{{ (jdk_version) | replace('+','%2B') }}"
+jdk_underscore_version: "{{ (jdk_version) | replace('+','_') }}"
+adopt_open_jdk_src: "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-{{jdk_escaped_version}}/OpenJDK11U-jdk_x64_linux_hotspot_{{jdk_underscore_version}}.tar.gz"
+jdk_src: "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-{{jdk_escaped_version}}/OpenJDK11U-jdk_x64_linux_hotspot_{{jdk_underscore_version}}.tar.gz"
