@@ -17,4 +17,4 @@ echo "running with ANSIBLE_PLAYBOOK_HOME=${ANSIBLE_PLAYBOOK_HOME}"
 # working
 ansible-playbook -i ${ANSIBLE_PLAYBOOK_HOME}/inventories/local -l localhost ${ANSIBLE_PLAYBOOK_HOME}/playbooks/pkgs.yml -u ${ANSIBLE_USER}
 ansible-playbook -i ${ANSIBLE_PLAYBOOK_HOME}/inventories/local -l localhost ${ANSIBLE_PLAYBOOK_HOME}/playbooks/mvn.yml -u ${ANSIBLE_USER}
-ansible-playbook -i ${ANSIBLE_PLAYBOOK_HOME}/inventories/local -l localhost ${ANSIBLE_PLAYBOOK_HOME}/playbooks/yatta.yml -u ${ANSIBLE_USER}
+#ansible-playbook -i ${ANSIBLE_PLAYBOOK_HOME}/inventories/local -l localhost ${ANSIBLE_PLAYBOOK_HOME}/playbooks/yatta.yml -u ${ANSIBLE_USER}

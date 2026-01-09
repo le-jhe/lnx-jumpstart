@@ -1,11 +1,11 @@
 if [ ! -d /etc/ansible ]; then
-	mkdir /etc/ansible
+	sudo mkdir /etc/ansible
 fi
 
 if [ -f /etc/ansible/hosts ]; then
 	sudo mv /etc/ansible/hosts /etc/ansible/hosts.orig
 else
-	echo "/etc/ansible/hosts does not exist"
+	echo "/etc/ansible/hosts backed up"
 fi
 
 sudo sh -c "cat << EOF > /etc/ansible/hosts 

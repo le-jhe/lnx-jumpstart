@@ -10,7 +10,7 @@ else
 fi
 
 . /etc/profile
-if [ ! -f ~/.ssh/id_*sq.pub ]; then
+if [ ! -f ~/.ssh/id_*.pub ]; then
 	ssh-keygen
 else
 	echo ".ssh public key already exists"
