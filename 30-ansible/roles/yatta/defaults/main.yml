@@ -1,0 +1,5 @@
+---
+
+app: yatta
+yatta_file: "yatta-eclipse-launcher-linux-64.jar"
+yatta_src: "http://cdn.yatta.de/update/profiles/{{ yatta_file }}"

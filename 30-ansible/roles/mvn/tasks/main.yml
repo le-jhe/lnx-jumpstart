@@ -18,7 +18,7 @@
 
 - name: link mvn
   file:
-    src: "{{dev_dir}}/apache-maven-{{version}}"
+    src: "{{dev_dir}}/apache-maven-{{mvn_version}}"
     dest: "{{dev_dir}}/mvn"
     state: link
     owner: "{{ devel_owner }}"

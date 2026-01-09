@@ -1,8 +1,7 @@
 ---
 
 - hosts: pkgs
-# vars_files:
-#    - "{{ vars_files_path }}"
   roles:
     - pkgs
+    - common
 

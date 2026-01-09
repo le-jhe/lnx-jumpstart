@@ -1,7 +1,7 @@
 ---
 
-- hosts: mvn
+- hosts: yatta
   roles:
-    - mvn
+    - yatta
     - common
 
